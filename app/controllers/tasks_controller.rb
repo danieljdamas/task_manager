@@ -47,7 +47,7 @@ class TasksController < ApplicationController
     @task.caption = params.fetch("caption")
     @task.due_date = params.fetch("due_date")
     @task.recurring_scheme_id = params.fetch("recurring_scheme_id")
-    @task.user_id = params.fetch("user_id")
+    
 
     if @task.valid?
       @task.save
