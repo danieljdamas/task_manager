@@ -1,0 +1,91 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Task #<%= @task.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/tasks" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link task start -->
+      <div class="col">
+        <a href="/tasks/<%= @task.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit task
+        </a>
+      </div>
+      <!-- Edit link task end -->
+
+      <!-- Delete link task start -->
+      <div class="col">
+        <a href="/delete_task/<%= @task.id %>" class="btn btn-block btn-outline-secondary">
+          Delete task
+        </a>
+      </div>
+      <!-- Delete link task end -->
+    </div>
+
+    <dl>
+      <dt>
+        Caption
+      </dt>
+      <!-- Display caption start -->
+      <dd>
+        <%= @task.caption %>
+      </dd>
+      <!-- Display caption end -->
+
+      <dt>
+        Due date
+      </dt>
+      <!-- Display due_date start -->
+      <dd>
+        <%= @task.due_date %>
+      </dd>
+      <!-- Display due_date end -->
+
+      <dt>
+        Recurring scheme
+      </dt>
+      <!-- Display recurring_scheme_id start -->
+      <dd>
+        <%= @task.recurring_scheme_id %>
+      </dd>
+      <!-- Display recurring_scheme_id end -->
+
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @task.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@task.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@task.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

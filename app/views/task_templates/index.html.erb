@@ -1,0 +1,112 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All tasks
+    </h1>
+
+    <a href="/tasks/new" class="btn btn-block btn-outline-secondary">
+      Add a new task
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Caption
+        </th>
+
+        <th>
+          Due date
+        </th>
+
+        <th>
+          Recurring scheme
+        </th>
+
+        <th>
+          User
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @tasks.each do |task| %>
+      <tr>
+        <!-- Display task.id start -->
+        <td>
+          <%= task.id %>
+        </td>
+        <!-- Display task.id end -->
+
+        <!-- Display task.caption start -->
+        <td>
+          <%= task.caption %>
+        </td>
+        <!-- Display task.caption end -->
+
+        <!-- Display task.due_date start -->
+        <td>
+          <%= task.due_date %>
+        </td>
+        <!-- Display task.due_date end -->
+
+        <!-- Display task.recurring_scheme_id start -->
+        <td>
+          <%= task.recurring_scheme_id %>
+        </td>
+        <!-- Display task.recurring_scheme_id end -->
+
+        <!-- Display task.user_id start -->
+        <td>
+          <%= task.user_id %>
+        </td>
+        <!-- Display task.user_id end -->
+
+        <!-- Display task.created_at start -->
+        <td>
+          <%= time_ago_in_words(task.created_at) %> ago
+        </td>
+        <!-- Display task.created_at end -->
+
+        <!-- Display task.updated_at start -->
+        <td>
+          <%= time_ago_in_words(task.updated_at) %> ago
+        </td>
+        <!-- Display task.updated_at end -->
+
+        <td>
+          <a href="/tasks/<%= task.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
