@@ -13,17 +13,21 @@
 
       <!-- Edit link task start -->
       <div class="col">
-        <a href="/tasks/<%= @task.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit task
-        </a>
+        <% if current_user == @task.user %>
+          <a href="/tasks/<%= @task.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit task
+          </a>
+        <% end %>
       </div>
       <!-- Edit link task end -->
 
       <!-- Delete link task start -->
       <div class="col">
-        <a href="/delete_task/<%= @task.id %>" class="btn btn-block btn-outline-secondary">
-          Delete task
-        </a>
+        <% if current_user == @task.user %>
+          <a href="/delete_task/<%= @task.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete task
+          </a>
+        <% end %>
       </div>
       <!-- Delete link task end -->
     </div>
