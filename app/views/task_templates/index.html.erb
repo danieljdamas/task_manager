@@ -84,7 +84,11 @@
 
         <!-- Display task.user_id start -->
         <td>
-          <%= task.user.email %>
+          <% if task.user.present? %>
+            <a href="/users/<%= task.user.id %>">
+              <%= task.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display task.user_id end -->
 

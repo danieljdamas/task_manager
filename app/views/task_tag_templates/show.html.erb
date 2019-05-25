@@ -34,7 +34,11 @@
       </dt>
       <!-- Display task_id start -->
       <dd>
-        <%= @task_tag.task_id %>
+        <% if @task_tag.task.present? %>
+          <a href="/tasks/<%= @task_tag.task_id %>">
+            <%= @task_tag.task.caption %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display task_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display tag_id start -->
       <dd>
-        <%= @task_tag.tag_id %>
+        <% if @task_tag.tag.present? %>
+          <a href="/tags/<%= @task_tag.tag_id %>">
+            <%= @task_tag.tag.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display tag_id end -->
 

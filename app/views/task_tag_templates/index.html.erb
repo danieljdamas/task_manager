@@ -58,13 +58,21 @@
 
         <!-- Display task_tag.task_id start -->
         <td>
-          <%= task_tag.task.caption %>
+          <% if task_tag.task.present? %>
+            <a href="/tasks/<%= task_tag.task.id %>">
+              <%= task_tag.task.caption %>
+            </a>
+          <% end %>
         </td>
         <!-- Display task_tag.task_id end -->
 
         <!-- Display task_tag.tag_id start -->
         <td>
-          <%= task_tag.tag.name %>
+          <% if task_tag.tag.present? %>
+            <a href="/tags/<%= task_tag.tag.id %>">
+              <%= task_tag.tag.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display task_tag.tag_id end -->
 

@@ -65,7 +65,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @task.user_id %>
+        <% if @task.user.present? %>
+          <a href="/users/<%= @task.user_id %>">
+            <%= @task.user.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 
