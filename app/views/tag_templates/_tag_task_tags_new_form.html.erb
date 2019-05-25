@@ -1,0 +1,25 @@
+<!-- Form task_tag start -->
+<form action="/create_task_tag_from_tag" method="post">
+<!-- Form task_tag end -->
+
+  <!-- Label and input for task_id start -->
+  <div class="form-group">
+    <label for="task_id">
+      Task
+    </label>
+
+    <!-- Input for task_id start -->
+    <input type="text" id="task_id" name="task_id" class="form-control" value="<%= @task_tag.task_id %>">
+    <!-- Input for task_id end -->
+  </div>
+  <!-- Label and input for task_id end -->
+
+  <!-- Label and input for tag_id start -->
+  <!-- Input for tag_id start -->
+  <input type="hidden" name="tag_id" value="<%= @tag.id %>">
+  <!-- Input for tag_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create task tag
+  </button>
+</form>

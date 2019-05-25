@@ -6,6 +6,7 @@ class TagsController < ApplicationController
   end
 
   def show
+    @task_tag = TaskTag.new
     @tag = Tag.find(params.fetch("id_to_display"))
 
     render("tag_templates/show.html.erb")

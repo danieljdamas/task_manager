@@ -32,6 +32,36 @@ class TaskTagsController < ApplicationController
     end
   end
 
+  def create_row_from_task
+    @task_tag = TaskTag.new
+
+    @task_tag.task_id = params.fetch("task_id")
+    @task_tag.tag_id = params.fetch("tag_id")
+
+    if @task_tag.valid?
+      @task_tag.save
+
+      redirect_to("/tasks/#{@task_tag.task_id}", notice: "TaskTag created successfully.")
+    else
+      render("task_tag_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_tag
+    @task_tag = TaskTag.new
+
+    @task_tag.task_id = params.fetch("task_id")
+    @task_tag.tag_id = params.fetch("tag_id")
+
+    if @task_tag.valid?
+      @task_tag.save
+
+      redirect_to("/tags/#{@task_tag.tag_id}", notice: "TaskTag created successfully.")
+    else
+      render("task_tag_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @task_tag = TaskTag.find(params.fetch("prefill_with_id"))
 

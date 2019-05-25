@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/task_tags/new", { :controller => "task_tags", :action => "new_form" })
   post("/create_task_tag", { :controller => "task_tags", :action => "create_row" })
+  post("/create_task_tag_from_tag", { :controller => "task_tags", :action => "create_row_from_tag" })
+  post("/create_task_tag_from_task", { :controller => "task_tags", :action => "create_row_from_task" })
 
   # READ
   get("/task_tags", { :controller => "task_tags", :action => "index" })

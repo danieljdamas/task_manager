@@ -6,6 +6,7 @@ class TasksController < ApplicationController
   end
 
   def show
+    @task_tag = TaskTag.new
     @task = Task.find(params.fetch("id_to_display"))
 
     render("task_templates/show.html.erb")
