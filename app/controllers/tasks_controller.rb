@@ -10,7 +10,8 @@ class TasksController < ApplicationController
   end
 
   def index
-    @tasks = current_user.tasks.page(params[:page]).per(10)
+    @q = current_user.tasks.ransack(params[:q])
+    @tasks = @q.result(:distinct => true).includes(:task_tags, :user).page(params[:page]).per(10)
 
     render("task_templates/index.html.erb")
   end
