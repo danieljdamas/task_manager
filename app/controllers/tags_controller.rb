@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
   def index
-    @tags = Tag.all
+    @tags = Tag.page(params[:page]).per(10)
 
     render("tag_templates/index.html.erb")
   end
