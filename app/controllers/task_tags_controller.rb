@@ -53,6 +53,22 @@ class TaskTagsController < ApplicationController
     end
   end
 
+  def destroy_row_from_task
+    @task_tag = TaskTag.find(params.fetch("id_to_remove"))
+
+    @task_tag.destroy
+
+    redirect_to("/tasks/#{@task_tag.task_id}", notice: "TaskTag deleted successfully.")
+  end
+
+  def destroy_row_from_tag
+    @task_tag = TaskTag.find(params.fetch("id_to_remove"))
+
+    @task_tag.destroy
+
+    redirect_to("/tags/#{@task_tag.tag_id}", notice: "TaskTag deleted successfully.")
+  end
+
   def destroy_row
     @task_tag = TaskTag.find(params.fetch("id_to_remove"))
 

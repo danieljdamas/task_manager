@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_task_tag/:id_to_remove", { :controller => "task_tags", :action => "destroy_row" })
+  get("/delete_task_tag_from_tag/:id_to_remove", { :controller => "task_tags", :action => "destroy_row_from_tag" })
+  get("/delete_task_tag_from_task/:id_to_remove", { :controller => "task_tags", :action => "destroy_row_from_task" })
 
   #------------------------------
 
@@ -65,6 +67,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_task/:id_to_remove", { :controller => "tasks", :action => "destroy_row" })
+  get("/delete_task_from_user/:id_to_remove", { :controller => "tasks", :action => "destroy_row_from_user" })
 
   #------------------------------
 
