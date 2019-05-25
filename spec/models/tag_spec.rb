@@ -4,6 +4,8 @@ RSpec.describe Tag, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:task_tags) }
+
     end
 
     describe "InDirect Associations" do
