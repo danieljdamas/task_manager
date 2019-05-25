@@ -1,0 +1,45 @@
+<h1>
+  Add a new tag
+</h1>
+
+
+<hr>
+
+<!-- Form tag start -->
+<form action="/create_tag" method="post">
+<!-- Form tag end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for color start -->
+  <div class="form-group">
+    <label for="color">
+      Color
+    </label>
+
+    <!-- Input for color start -->
+    <input type="text" id="color" name="color" class="form-control">
+    <!-- Input for color end -->
+  </div>
+  <!-- Label and input for color end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create tag
+  </button>
+</form>
+
+<hr>
+
+<a href="/tags">
+  Go back
+</a>

@@ -1,0 +1,92 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All tags
+    </h1>
+
+    <a href="/tags/new" class="btn btn-block btn-outline-secondary">
+      Add a new tag
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Name
+        </th>
+
+        <th>
+          Color
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @tags.each do |tag| %>
+      <tr>
+        <!-- Display tag.id start -->
+        <td>
+          <%= tag.id %>
+        </td>
+        <!-- Display tag.id end -->
+
+        <!-- Display tag.name start -->
+        <td>
+          <%= tag.name %>
+        </td>
+        <!-- Display tag.name end -->
+
+        <!-- Display tag.color start -->
+        <td>
+          <%= tag.color %>
+        </td>
+        <!-- Display tag.color end -->
+
+        <!-- Display tag.created_at start -->
+        <td>
+          <%= time_ago_in_words(tag.created_at) %> ago
+        </td>
+        <!-- Display tag.created_at end -->
+
+        <!-- Display tag.updated_at start -->
+        <td>
+          <%= time_ago_in_words(tag.updated_at) %> ago
+        </td>
+        <!-- Display tag.updated_at end -->
+
+        <td>
+          <a href="/tags/<%= tag.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
