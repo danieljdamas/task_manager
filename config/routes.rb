@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Task tag resource:
+
+  # CREATE
+  get("/task_tags/new", { :controller => "task_tags", :action => "new_form" })
+  post("/create_task_tag", { :controller => "task_tags", :action => "create_row" })
+
+  # READ
+  get("/task_tags", { :controller => "task_tags", :action => "index" })
+  get("/task_tags/:id_to_display", { :controller => "task_tags", :action => "show" })
+
+  # UPDATE
+  get("/task_tags/:prefill_with_id/edit", { :controller => "task_tags", :action => "edit_form" })
+  post("/update_task_tag/:id_to_modify", { :controller => "task_tags", :action => "update_row" })
+
+  # DELETE
+  get("/delete_task_tag/:id_to_remove", { :controller => "task_tags", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Tag resource:
 
   # CREATE

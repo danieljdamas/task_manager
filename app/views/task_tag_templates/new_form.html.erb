@@ -1,0 +1,45 @@
+<h1>
+  Add a new task tag
+</h1>
+
+
+<hr>
+
+<!-- Form task_tag start -->
+<form action="/create_task_tag" method="post">
+<!-- Form task_tag end -->
+
+  <!-- Label and input for task_id start -->
+  <div class="form-group">
+    <label for="task_id">
+      Task
+    </label>
+
+    <!-- Input for task_id start -->
+    <input type="text" id="task_id" name="task_id" class="form-control">
+    <!-- Input for task_id end -->
+  </div>
+  <!-- Label and input for task_id end -->
+
+  <!-- Label and input for tag_id start -->
+  <div class="form-group">
+    <label for="tag_id">
+      Tag
+    </label>
+
+    <!-- Input for tag_id start -->
+    <input type="text" id="tag_id" name="tag_id" class="form-control">
+    <!-- Input for tag_id end -->
+  </div>
+  <!-- Label and input for tag_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create task tag
+  </button>
+</form>
+
+<hr>
+
+<a href="/task_tags">
+  Go back
+</a>
