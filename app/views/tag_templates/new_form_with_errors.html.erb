@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @tag.present? %>
   <% if @tag.errors.any? %>
     <% @tag.errors.full_messages.each do |message| %>
@@ -16,33 +15,23 @@
 
 <hr>
 
-<!-- Form tag start -->
 <form action="/create_tag" method="post">
-<!-- Form tag end -->
 
-  <!-- Label and input for name start -->
   <div class="form-group">
     <label for="name">
       Name
     </label>
 
-    <!-- Input for name start -->
     <input type="text" id="name" name="name" class="form-control" value="<%= @tag.name %>">
-    <!-- Input for name end -->
   </div>
-  <!-- Label and input for name end -->
 
-  <!-- Label and input for color start -->
   <div class="form-group">
     <label for="color">
       Color
     </label>
 
-    <!-- Input for color start -->
     <input type="text" id="color" name="color" class="form-control" value="<%= @tag.color %>">
-    <!-- Input for color end -->
   </div>
-  <!-- Label and input for color end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create tag

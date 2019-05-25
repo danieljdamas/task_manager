@@ -5,33 +5,23 @@
 
 <hr>
 
-<!-- Form task_tag start -->
 <form action="/create_task_tag" method="post">
-<!-- Form task_tag end -->
 
-  <!-- Label and input for task_id start -->
   <div class="form-group">
     <label for="task_id">
       Task
     </label>
 
-    <!-- Input for task_id start -->
     <%= select_tag(:task_id, options_from_collection_for_select(Task.all, :id, :caption, @task_tag.task_id), :class => "form-control") %>
-    <!-- Input for task_id end -->
   </div>
-  <!-- Label and input for task_id end -->
 
-  <!-- Label and input for tag_id start -->
   <div class="form-group">
     <label for="tag_id">
       Tag
     </label>
 
-    <!-- Input for tag_id start -->
     <%= select_tag(:tag_id, options_from_collection_for_select(Tag.all, :id, :name, @task_tag.tag_id), :class => "form-control") %>
-    <!-- Input for tag_id end -->
   </div>
-  <!-- Label and input for tag_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create task tag

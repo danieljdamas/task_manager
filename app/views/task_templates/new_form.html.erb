@@ -5,51 +5,33 @@
 
 <hr>
 
-<!-- Form task start -->
 <form action="/create_task" method="post">
-<!-- Form task end -->
 
-  <!-- Label and input for caption start -->
   <div class="form-group">
     <label for="caption">
       Caption
     </label>
 
-    <!-- Input for caption start -->
     <input type="text" id="caption" name="caption" class="form-control">
-    <!-- Input for caption end -->
   </div>
-  <!-- Label and input for caption end -->
 
-  <!-- Label and input for due_date start -->
   <div class="form-group">
     <label for="due_date">
       Due date
     </label>
 
-    <!-- Input for due_date start -->
     <input type="text" id="due_date" name="due_date" class="form-control">
-    <!-- Input for due_date end -->
   </div>
-  <!-- Label and input for due_date end -->
 
-  <!-- Label and input for recurring_scheme_id start -->
   <div class="form-group">
     <label for="recurring_scheme_id">
       Recurring scheme
     </label>
 
-    <!-- Input for recurring_scheme_id start -->
     <input type="text" id="recurring_scheme_id" name="recurring_scheme_id" class="form-control">
-    <!-- Input for recurring_scheme_id end -->
   </div>
-  <!-- Label and input for recurring_scheme_id end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Input for "user_id" start -->
   <input type="hidden" name="user_id" value="<%= current_user.id %>">
-  <!-- Input for "user_id" end -->
-  <!-- Label and input for user_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create task

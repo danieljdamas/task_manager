@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link task start -->
       <div class="col">
         <% if current_user == @task.user %>
           <a href="/tasks/<%= @task.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link task end -->
 
-      <!-- Delete link task start -->
       <div class="col">
         <% if current_user == @task.user %>
           <a href="/delete_task/<%= @task.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,41 +26,33 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link task end -->
     </div>
 
     <dl>
       <dt>
         Caption
       </dt>
-      <!-- Display caption start -->
       <dd>
         <%= @task.caption %>
       </dd>
-      <!-- Display caption end -->
 
       <dt>
         Due date
       </dt>
-      <!-- Display due_date start -->
       <dd>
         <%= @task.due_date %>
       </dd>
-      <!-- Display due_date end -->
 
       <dt>
         Recurring scheme
       </dt>
-      <!-- Display recurring_scheme_id start -->
       <dd>
         <%= @task.recurring_scheme_id %>
       </dd>
-      <!-- Display recurring_scheme_id end -->
 
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @task.user.present? %>
           <a href="/users/<%= @task.user_id %>">
@@ -71,33 +60,26 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@task.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@task.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "task_templates/task_task_tags" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

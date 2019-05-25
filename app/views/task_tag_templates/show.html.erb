@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link task_tag start -->
       <div class="col">
         <a href="/task_tags/<%= @task_tag.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit task tag
         </a>
       </div>
-      <!-- Edit link task_tag end -->
 
-      <!-- Delete link task_tag start -->
       <div class="col">
         <a href="/delete_task_tag/<%= @task_tag.id %>" class="btn btn-block btn-outline-secondary">
           Delete task tag
         </a>
       </div>
-      <!-- Delete link task_tag end -->
     </div>
 
     <dl>
       <dt>
         Task
       </dt>
-      <!-- Display task_id start -->
       <dd>
         <% if @task_tag.task.present? %>
           <a href="/tasks/<%= @task_tag.task_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display task_id end -->
 
       <dt>
         Tag
       </dt>
-      <!-- Display tag_id start -->
       <dd>
         <% if @task_tag.tag.present? %>
           <a href="/tags/<%= @task_tag.tag_id %>">
@@ -53,28 +46,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display tag_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@task_tag.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@task_tag.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

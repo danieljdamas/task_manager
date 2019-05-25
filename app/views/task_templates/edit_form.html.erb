@@ -4,48 +4,32 @@
 
 <hr>
 
-<!-- Form task start -->
 <form action="/update_task/<%= @task.id %>" method="post">
-<!-- Form task end -->
 
-  <!-- Label and input for caption start -->
   <div class="form-group">
     <label for="caption">
       Caption
     </label>
 
-    <!-- Input for caption start -->
     <input type="text" id="caption" name="caption" class="form-control" value="<%= @task.caption %>">
-    <!-- Input for caption end -->
   </div>
-  <!-- Label and input for caption end -->
 
-  <!-- Label and input for due_date start -->
   <div class="form-group">
     <label for="due_date">
       Due date
     </label>
 
-    <!-- Input for due_date start -->
     <input type="text" id="due_date" name="due_date" class="form-control" value="<%= @task.due_date %>">
-    <!-- Input for due_date end -->
   </div>
-  <!-- Label and input for due_date end -->
 
-  <!-- Label and input for recurring_scheme_id start -->
   <div class="form-group">
     <label for="recurring_scheme_id">
       Recurring scheme
     </label>
 
-    <!-- Input for recurring_scheme_id start -->
     <input type="text" id="recurring_scheme_id" name="recurring_scheme_id" class="form-control" value="<%= @task.recurring_scheme_id %>">
-    <!-- Input for recurring_scheme_id end -->
   </div>
-  <!-- Label and input for recurring_scheme_id end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Label and input for user_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update task

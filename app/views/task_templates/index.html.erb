@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "task_templates/tasks_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -62,31 +58,22 @@
 
       <% @tasks.each do |task| %>
       <tr>
-        <!-- Display task.id start -->
         <td>
           <%= task.id %>
         </td>
-        <!-- Display task.id end -->
 
-        <!-- Display task.caption start -->
         <td>
           <%= task.caption %>
         </td>
-        <!-- Display task.caption end -->
 
-        <!-- Display task.due_date start -->
         <td>
           <%= task.due_date %>
         </td>
-        <!-- Display task.due_date end -->
 
-        <!-- Display task.recurring_scheme_id start -->
         <td>
           <%= task.recurring_scheme_id %>
         </td>
-        <!-- Display task.recurring_scheme_id end -->
 
-        <!-- Display task.user_id start -->
         <td>
           <% if task.user.present? %>
             <a href="/users/<%= task.user.id %>">
@@ -94,19 +81,14 @@
             </a>
           <% end %>
         </td>
-        <!-- Display task.user_id end -->
 
-        <!-- Display task.created_at start -->
         <td>
           <%= time_ago_in_words(task.created_at) %> ago
         </td>
-        <!-- Display task.created_at end -->
 
-        <!-- Display task.updated_at start -->
         <td>
           <%= time_ago_in_words(task.updated_at) %> ago
         </td>
-        <!-- Display task.updated_at end -->
 
         <td>
           <a href="/tasks/<%= task.id %>">

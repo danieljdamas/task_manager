@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @task.task_tags.each do |task_tag| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/task_tags/<%= task_tag.id %>">
           <%= task_tag.task_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_task_tag_from_task/<%= task_tag.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="task_task_tags_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "task_templates/task_task_tags_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 
