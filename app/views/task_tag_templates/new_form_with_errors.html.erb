@@ -39,7 +39,7 @@
     </label>
 
     <!-- Input for tag_id start -->
-    <input type="text" id="tag_id" name="tag_id" class="form-control" value="<%= @task_tag.tag_id %>">
+    <%= select_tag(:tag_id, options_from_collection_for_select(Tag.all, :id, :name, @task_tag.tag_id), :class => "form-control") %>
     <!-- Input for tag_id end -->
   </div>
   <!-- Label and input for tag_id end -->
